@@ -6,9 +6,9 @@ library(dplyr)
 library(data.table)
 library(survival)
 library(survminer)
-source("C:/Users/robmc/Desktop/NUMB/repairGenes.R") 
+source("./repairGenes.R") 
 '%notin%' <- Negate('%in%')
-homeDir <- "C:/Users/robmc/Desktop/NUMB_files"
+homeDir <- "../NUMB_files"
 
 ## Function area  --------------------------------------------------------
 plotSigs <- function(sigs, clin) {
