@@ -7,9 +7,9 @@ library(reshape2)
 library(dplyr)
 library(survival)
 library(survminer)
-source("C:/Users/robmc/Desktop/NUMB/repairGenes.R") 
+source("./repairGenes.R") 
 '%notin%' <- Negate('%in%')
-homeDir <- "C:/Users/robmc/Desktop/NUMB_files"
+homeDir <- "../NUMB_files"
 
 ## Function area  --------------------------------------------------------
 generateOncoplot <- function(mutations, clin, cnv) {
