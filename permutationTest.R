@@ -6,7 +6,7 @@ library(data.table)
 library(reshape2)
 library(dplyr)
 library(qvalue)
-homeDir<- "C:/Users/robmc/Desktop/NUMB_files"
+homeDir<- "../NUMB_files"
 '%notin%' <- Negate('%in%')
 
 ### Functions -------------------------------------
