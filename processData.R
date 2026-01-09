@@ -3,10 +3,10 @@ library(BSgenome.Hsapiens.UCSC.hg19)
 library(deconstructSigs)
 library(data.table)
 library(dplyr)
-source("C:/Users/robmc/Desktop/NUMB/repairGenes.R")
-load("C:/Users/robmc/Desktop/NUMB_files/data/signatures.genome.cosmic.v3.may2019.rda")
+source("./repairGenes.R")
+load("../NUMB_files/data/signatures.genome.cosmic.v3.may2019.rda")
 '%notin%' <- Negate('%in%')
-homeDir <- "C:/Users/robmc/Desktop/NUMB_files"
+homeDir <- "../NUMB_files"
 
 ## processData function ##----------------------
 # Data processing designed for use with cohorts downloaded from cBioPortal.org
