@@ -1,7 +1,7 @@
 from random import sample, shuffle
 import numpy as np
 import pandas as pd
-from optparse import OptionParser
+import argparse
 import os, sys, time
 
 def import_data(location):
@@ -62,14 +62,13 @@ def permTest(options):
   (results/options.num_perms).to_csv(str(options.num_perms)+'_Permutations_Raw.csv', index=True)
 
 def main():
-  parser = OptionParser()
-  parser.add_option("-d", "--data_location", dest="data_location", help="Matrix input file")
-  parser.add_option("-n", "--num", dest="num_perms", default=1000, type="int", help="Number of Permutations to run")
-
-  (options, args) = parser.parse_args()
+  parser = argparse.ArgumentParser(description = "Run permutation test")
+  parser.add_argument("-d", "--data_location", dest="data_location", help="Matrix input file")
+  parser.add_argument("-n", "--num", dest="num_perms", default=1000, type="int", help="Number of Permutations to run")
+  args = parser.parse_args()
 
   # Run permutation test
-  permTest(options)
+  permTest(args)
 
 if __name__ == '__main__':
   sys.exit(main())
